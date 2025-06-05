@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Trolly</title>
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/newarrivals.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-actions">
+          <a href="#">SEARCH</a>
+          <span>|</span>
+          <a href="#">LOGIN</a>
+          <span>|</span>
+          <a href="#">REGISTER</a>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <div class="main-header">
+        <div class="logo">
+          <a href="/index.html">
+            <img src="./images/logo.png" alt="Go Trolly Logo" />
+          </a>
+        </div>
+       <nav class="nav-links">
+          <a href="/flashsale.html">FLASH SALE</a>
+          <a href="/newarrivals.html">NEW ARRIVALS</a>
+
+          <div class="dropdown" id="dropdown">
+            <a class="dropdown-toggle">PRODUCTS ▾</a>
+            <div class="dropdown-menu">
+              <a href="/products.html">All PRODUCTS</a>
+              <a href="/audio.html">Audio</a>
+              <a href="/smartphones.html">Smartphones</a>
+              <a href="/charging.html">Charging and Power</a>
+            </div>
+          </div>
+
+          <a href="/topselling.html">TOP SELLING</a>
+          <a href="/projects.html">PROJECTS</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <div>
+      <section class="top-products">
+        <div class="product-grid">
+          <div class="product-item">
+            <img src="./images/output-019.png" alt="Customer 1" />
+            <div class="product-content">
+              <span>CAMERA STAND</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 3500</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="./images/output-024.png" alt="Customer 2" />
+            <div class="product-content">
+              <span>CAMERA HOLDER</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 2500</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="./images/output-009.png" alt="Customer 3" />
+            <div class="product-content">
+              <span>CABLE WIRE</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 3500</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="./images/output-023.png" alt="Customer 1" />
+            <div class="product-content">
+              <span>CAMERA STAND</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 1000</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="./images/output-022.png" alt="Customer 2" />
+            <div class="product-content">
+              <span>EAR PHONES</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 5500</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="./images/output-021.png" alt="Customer 3" />
+            <div class="product-content">
+              <span>SMART WATCH</span>
+              <p class="product-stars">★★★★★</p>
+              <p class="price">RS 1500</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2 class="trending-text">TRENDING NOW</h2>
+      <div class="hero"></div>
+      <div class="hero2"></div>
+      <div class="hero3"></div>
+      <section class="categories">
+        <h2 class="trending-text">CATEGORIES</h2>
+        <div class="categories-grid">
+          <div class="categories-item">
+            <img src="./images/output-029.png" alt="offer 1" />
+            <div class="offer-content">
+              <h3>FLASH LIGHTS</h3>
+            </div>
+          </div>
+          <div class="categories-item">
+            <img src="./images/output-027.png" alt="offer 2" />
+            <div class="offer-content">
+              <h3>CAMERA BAGS</h3>
+            </div>
+          </div>
+          <div class="categories-item">
+            <img src="./images/output-028.png" alt="offer 3" />
+            <div class="offer-content">
+              <h3>LAPTOP STANDS</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div>
+          <h4>Shop GO TROLLY</h4>
+          <p>Chargers<br />Wire<br />Cables<br />Accessories<br />Parts</p>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <p>
+            About Us<br />Contact Us<br />Warranty<br />Shipping<br />Returns &
+            Exchanges<br />FAQs
+          </p>
+        </div>
+        <div>
+          <h4>Check This Out</h4>
+          <p>Customer Pics<br />Reviews<br />Testimonials<br />Partnerships</p>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>Call: 000-987-433-668<br />Email: gotrolly@gmail.com</p>
+        </div>
+      </div>
+      <p class="copyright">© 2023 All rights reserved</p>
+    </footer>
+  </body>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+          const toggle = dropdown.querySelector(".dropdown-toggle");
+
+          let justOpened = false;
+
+          toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Close all other dropdowns first
+            dropdowns.forEach((d) => {
+              if (d !== dropdown) d.classList.remove("open");
+            });
+
+            dropdown.classList.toggle("open");
+            justOpened = true;
+
+            setTimeout(() => {
+              justOpened = false;
+            }, 100);
+          });
+
+          document.addEventListener("click", function (e) {
+            if (justOpened) return;
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("open");
+            }
+          });
+        });
+      });
+    </script>
+</html>
