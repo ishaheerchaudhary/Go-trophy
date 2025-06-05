@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.top-products {
+  background-color: #ffc107;
+  padding: 25px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 30px;
+}
+
+.product-item {
+  display: flex;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.product-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.product-item img {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.product-content {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: 1em;
+  text-align: justify;
+  flex: 1;
+}
+
+.product-content span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.product-stars {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.price-discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.price {
+  font-size: 1.8em;
+}
+
+.discount {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  min-width: 60px; /* Increased width to fit longer discount text */
+  background-color: #ffc107;
+  text-align: center;
+}
+
+.hero {
+  background-image: url("../images/flashsaleshero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.offers-text {
+  font-size: 1.9em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.offers-grid {
+  display: grid;
+  margin: 0 40px;
+  width: fit-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 30px;
+  padding: 20px;
+  color: black;
+}
+
+.offers-item {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  justify-content: space-between;
+  border: 5px solid #ffc107;
+  background-color: #ffc107;
+}
+
+.offers-item img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+.offer-content {
+  padding: 0 10px;
+  text-align: center;
+  background-color: #ffc107;
+}
+.offer-content h3 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+.offer-content h2 {
+  font-size: 1.5em;
+  margin: 20px 0;
+  text-align: right;
+}
+@media (max-width: 600px) {
+  .top-products {
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    margin: 0 15px;
+  }
+
+  .product-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0 10px 0;
+  }
+
+  .product-content {
+    align-items: center;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  .product-content span {
+    font-size: 1.2em;
+  }
+
+  .price-discount {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .price {
+    font-size: 1.5em;
+  }
+
+  .discount {
+    font-size: 1em;
+  }
+
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .offers-text {
+    font-size: 1.5em;
+    padding: 0 10px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+    margin: 0 15px;
+  }
+
+  .offers-item img {
+    height: 80%;
+  }
+
+  .offer-content h3 {
+    font-size: 1.5em;
+  }
+
+  .offer-content h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20px;
+  }
+
+  .product-item img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .product-content {
+    font-size: 1em;
+  }
+
+  .price-discount {
+    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-size: 1.6em;
+  }
+
+  .discount {
+    font-size: 1em;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 1rem;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 30px;
+  }
+
+  .offers-item img {
+    height: 60%;
+  }
+
+  .offer-content h3 {
+    font-size: 1.7em;
+  }
+
+  .offer-content h2 {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 901px) {
+  .offers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
